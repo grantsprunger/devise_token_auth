@@ -3,7 +3,6 @@ module DeviseTokenAuth
   class SessionsController < DeviseTokenAuth::ApplicationController
     before_action :set_user_by_token, :only => [:destroy]
     after_action :reset_session, :only => [:destroy]
-    respond_to :json
 
     def new
       render_new_error
